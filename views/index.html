@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Zadanie 5</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+    <script src="../js/jquery/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCytfSny1cYOdos8QoDMdqZPmqVPyewW1M&callback=myMap"
+            defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Zadanie 5</h1>
+</header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="startPos">
+                <input class="form-control" id="startPosition" type="text" placeholder="Začiatok cesty">
+            </div>
+            <div class="typeOfRoute">
+                <label for="mode" id="modeLabel">Spôsob dopravy</label>
+                <select id="mode" class="form-control">
+                    <option value="none">-----</option>
+                    <option value="DRIVING">Auto</option>
+                    <option value="WALKING">Chôdza</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="generate">Generovať</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 ">
+            <div id="googleMap"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="street-view"></div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div id="time"></div>
+            <div class="placeholder"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    © Marek Dráb
+</footer>
+</body>
+</html>
